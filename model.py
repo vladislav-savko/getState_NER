@@ -217,7 +217,7 @@ class HuggingFaceNER(LabelStudioMLBase):
 
         model = AutoModelForTokenClassification.from_pretrained(
             BASELINE_MODEL_NAME, num_labels=len(id_to_label),
-            id2label=id_to_label, label2id=label_to_id)
+            id2label=id_to_label, label2id=label_to_id, ignore_mismatched_sizes=True)
         logger.debug(f"Model: {model}")
 
         training_args = TrainingArguments(
