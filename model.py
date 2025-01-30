@@ -47,7 +47,7 @@ class HuggingFaceNER(LabelStudioMLBase):
     LABEL_STUDIO_HOST = os.getenv('LABEL_STUDIO_HOST', 'http://localhost:8080')
     LABEL_STUDIO_API_KEY = os.getenv('LABEL_STUDIO_API_KEY')
     START_TRAINING_EACH_N_UPDATES = int(os.getenv('START_TRAINING_EACH_N_UPDATES', 10))
-    LEARNING_RATE = float(os.getenv('LEARNING_RATE', 1e-3))
+    LEARNING_RATE = float(os.getenv('LEARNING_RATE', 3e-5))
     NUM_TRAIN_EPOCHS = int(os.getenv('NUM_TRAIN_EPOCHS', 10))
     WEIGHT_DECAY = float(os.getenv('WEIGHT_DECAY', 0.01))
 
